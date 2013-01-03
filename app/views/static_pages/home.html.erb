@@ -1,0 +1,90 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+  <div class="center hero-unit">
+    <h1>Wally Tents</h1>
+
+    <h2>
+      This is the home page for Wally Tents & Chairs Limited.
+    </h2>
+
+    <%= link_to "Get a free quote", signup_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
+  <div class="row">
+    <h2>
+      This is an overview of the services that will be provided by our company.
+    </h2>
+
+  <div class="span4 offset2">
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail">
+          <%= link_to image_tag("pics/img_34881.jpg", alt: "Roses"), '#' %>
+          <h5>Decorations</h5>
+          <p>Beautiful roses</p>
+        </div>
+      </li>
+    </ul>
+    <p># Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end</p>
+  </div>
+  <div class="span4">
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail">
+          <%= link_to image_tag("pics/dsc04826-2.jpg", alt: "Chairs"), '#' %>
+          <h5>Chairs</h5>
+          <p>We could provide decorated chairs</p>
+        </div>
+      </li>
+    </ul>
+    <p># Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end</p>
+  </div>
+ 
+  </div>
+
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<% end %>
