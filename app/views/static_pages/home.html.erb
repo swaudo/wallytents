@@ -19,15 +19,34 @@
 <% else %>
 
   <div class="center hero-unit">
-    <h1>Wally Tents</h1>
+     <div class ="row">
+      <div class="span6">
+
+      <h1>Wally Tents</h1>
 
     <h2>
       This is the home page for Wally Tents & Chairs Limited.
     </h2>
 
-    <%= link_to "Get a free quote", signup_path, 
-                                class: "btn btn-large btn-primary" %>
+    <%= link_to "Get a free quote", signup_path, class: "btn btn-large btn-primary" %>
+     </div>
+     <div class="span4">
+      <div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+        <div class="active item"><%= link_to image_tag("pics/img_34881.jpg", alt: "Roses"), '#' %></div>  
+        <div class="item"><%= link_to image_tag("pics/peris-ray-26.jpg", alt: "Roses"), '#' %></div>  
+        <div class="item"><%= link_to image_tag("pics/peris-ray-33.jpg", alt: "Roses"), '#' %></div>  
+        <div class="item"><%= link_to image_tag("pics/peris-ray-50.jpg", alt: "Roses"), '#' %></div> 
   </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+    </div>
+  </div>
+  </div>
+
   <div class="row">
     <h2>
       This is an overview of the services that will be provided by our company.
